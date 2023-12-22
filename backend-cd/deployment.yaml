@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: petcare-deployment
+  namespace: petcare
+spec:
+  replicas: 2  # Adjust the number of replicas as needed
+  selector:
+    matchLabels:
+      app: petcare
+  template:
+    metadata:
+      labels:
+        app: petcare
+    spec:
+      containers:
+      - name: petcare-container
+        image: zetnguyen17/petcare-backend:1.0.0-2
+        ports:
+        - containerPort: 8080  # Update the container port if needed
