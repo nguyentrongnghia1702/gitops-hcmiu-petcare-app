@@ -35,7 +35,7 @@ pipeline {
                 sh """
                    git config --global user.name "Jenkins"
                    git config --global user.email "Jenkins@gmail.com"
-                   git add deployment.yaml
+                   git add .
                    git commit -m "Updated Deployment Manifest"
                 """
                 withCredentials([gitUsernamePassword(credentialsId: 'github', gitToolName: 'Default')]) {
