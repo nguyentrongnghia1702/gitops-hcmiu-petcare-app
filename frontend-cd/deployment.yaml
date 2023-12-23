@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: petcare-deployment-ui
+spec:
+  replicas: 2  # Adjust the number of replicas as needed
+  selector:
+    matchLabels:
+      app: petcare-ui
+  template:
+    metadata:
+      labels:
+        app: petcare-ui
+    spec:
+      containers:
+      - name: petcare-container
+        image: zetnguyen17/petcare-ui:v2
+        ports:
+        - containerPort: 80
