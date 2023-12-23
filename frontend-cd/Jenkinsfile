@@ -39,7 +39,7 @@ pipeline {
                    git commit -m "Updated Deployment Manifest"
                 """
                 withCredentials([gitUsernamePassword(credentialsId: 'github', gitToolName: 'Default')]) {
-                  sh "git push https://github.com/nguyentrongnghia1702/gitops-hcmiu-petcare-app backend-CD"
+                  sh "git push https://github.com/nguyentrongnghia1702/gitops-hcmiu-petcare-app frontend-CD"
                 }
             }
         }
