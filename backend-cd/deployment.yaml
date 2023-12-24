@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: petcare-container
-        image: zetnguyen17/petcare-backend:
+        image: zetnguyen17/petcare-backend:1.0.0-9
         ports:
         - containerPort: 8080  # Update the container port if needed
