@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: petcare-container
-        image: zetnguyen17/petcare-frontend:1.0.0-9
+        image: zetnguyen17/petcare-frontend:1.0.0-10
         ports:
         - containerPort: 3000
